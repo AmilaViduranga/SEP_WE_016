@@ -45,7 +45,6 @@ function UserController() {
         var username =  UserInstance[0].user_name;
         var fullname = UserInstance[0].full_name;
         var email = UserInstance[0].email;
-
         UserRole.findOne( {
                 where: { userRoleName: type}
             }
@@ -87,17 +86,16 @@ function UserController() {
                             });
 
                         }else if(type == 'HOD'){
-
+                            var departmentId = UserInstance[1].DepartmentId;
                             Hod.create(
                                 {
                                     status:1,
-                                    UserId : user_id
-
+                                    UserId : user_id,
+                                    DepartmentId: departmentId
                                 }
                             ).then(function(data) {
-                                    res.send(user_data);
-                                });
-
+                                res.send(user_data);
+                            });
                         }
 
                     });
