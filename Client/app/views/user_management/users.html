@@ -112,7 +112,10 @@
                                                         <div class="form-group"  >
                                                             <label class="control-label ">Department</label>
                                                             <div class="">
-                                                                <input type="text" class="form-control" ng-model="hod_department" name="hod_department" required>
+                                                                <select class="form-control" ng-model="hod_department">
+                                                                    <option disabled selected value> select Department </option>
+                                                                    <option ng-repeat="department in departments" value="{{department.id}}" required="true" ng-selected="updateBatchDepartment == department.id">{{department.DepartmentName}}</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>

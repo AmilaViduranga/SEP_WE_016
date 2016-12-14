@@ -15,7 +15,7 @@ angular.module('armsAngularApp')
         'Karma'
       ];
         var getAllUser_api = 'http://localhost:8002/user-management/get-all-users';
-
+        $scope.departments = [];
 
         //Set up table headers
         $scope.setTableHeaders = function(){
@@ -68,7 +68,7 @@ angular.module('armsAngularApp')
             $scope.reloadData();
         });
 }])
-.controller('UserCtrl',['$http','$scope','$rootScope', function ($http,$scope,$rootScope ) {
+.controller('UserCtrl',['$http','$scope','$rootScope','departmentService',function ($http,$scope,$rootScope,departmentService ) {
       this.awesomeThings = [
         'HTML5 Boilerplate',
         'AngularJS',
@@ -155,6 +155,14 @@ angular.module('armsAngularApp')
           //$scope.userTypeForm.$setPristine();
 
       };
+
+        function getAvailableDepartments() {
+            return departmentService.getAllDepartments().then(function(departments) {
+                $scope.departments = departments.data;
+            })
+        }
+
+        getAvailableDepartments();
 
       function resetDataFields(){
         $scope.full_name = '';
