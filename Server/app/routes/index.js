@@ -17,6 +17,7 @@ var QuestionRoute = require('./moduleRoutes/QuestionRoute');
 var Appointment = require('./moduleRoutes/AppointmentRoute');
 var DepartmentRoute = require('./moduleRoutes/DepartmentRoute');
 var BatchRoute = require('./moduleRoutes/BatchRoute');
+var RoomRoute = require('./moduleRoutes/RoomsRoute');
 // route for api authentication
 var ApiAuthenticationRoute = require('./moduleRoutes/authentication/ApiAuthenticationRoute');
 var CenterRoute = require('./moduleRoutes/CenterRoute');
@@ -36,6 +37,7 @@ router.use('/api/authentication/', ApiAuthenticationRoute);
 router.use('/center/', CenterRoute);
 router.use('/department/', DepartmentRoute);
 router.use('/batch/', BatchRoute);
+router.use('/room/', RoomRoute);
 
 
 module.exports = router;

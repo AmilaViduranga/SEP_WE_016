@@ -146,6 +146,11 @@ angular
                 controller: 'BatchCtrl',
                 controllerAs: 'Batch'
             })
+            .when('/control-panel/admin/room', {
+                templateUrl: 'views/rooms/room.html',
+                controller: 'RoomsRoomCtrl',
+                controllerAs: 'Room'
+            })
             .otherwise({
                 redirectTo: '/'
             });

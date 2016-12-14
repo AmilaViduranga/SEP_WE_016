@@ -8,3 +8,6 @@
 [0917/154454:ERROR:process_info.cc(608)] range at 0xfe68c000, size 0xf84 fully unreadable
 [0917/154454:ERROR:process_info.cc(608)] range at 0xfe689000, size 0xf84 fully unreadable
 [0917/154454:ERROR:process_info.cc(608)] range at 0xfe7ec000, size 0xf84 fully unreadable
+[1214/155355:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[1214/155355:ERROR:exception_snapshot_win.cc(87)] thread ID 544 not found in process
+[1214/155355:WARNING:crash_report_exception_handler.cc(56)] ProcessSnapshotWin::Initialize failed
