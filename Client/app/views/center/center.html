@@ -21,7 +21,7 @@
                     <i class="fa fa-times"></i></button>
             </div>
         </div>
-        <form class="form-horizontal" name="centerForm" ng-submit="submitCenterForm(centerForm.$valid)" novalidate>
+        <form class="form-horizontal" name="centerForm" ng-submit="submitCenterForm(centerForm.$valid)">
             <div class="box-body">
                 <div class="row">
                     <div class="col-sm-2">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="centerName" required="true" placeholder="new center name eg:Malabe center"
-                               ng-model="CenterName">
+                               ng-model="CenterName" pattern="^ *[A-Za-z]+[A-Za-z]*$" title="please insert valid format of center">
                     </div>
                 </div>
                 <br>

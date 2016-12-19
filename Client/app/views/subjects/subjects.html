@@ -32,7 +32,7 @@
                                 <label class="pull-right">Subject Name</label>
                             </div>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="subjectName" placeholder="new subject name eg:DCCN" ng-model="subjectName" required="true">
+                                <input type="text" class="form-control" name="subjectName" placeholder="new subject name eg:DCCN" ng-model="subjectName" required="true" pattern="^ *[A-Za-z]+[A-Za-z]*$" title="please insert valid format for subject name eg:-DCCN">
                             </div>
                         </div>
                         <div class="row form-group">
@@ -40,7 +40,7 @@
                                 <label class="pull-right">Subject Code</label>
                             </div>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="subjectCode"  placeholder="new subject Code eg:IT001" ng-model="subjectCode" required="true">
+                                <input type="text" class="form-control" name="subjectCode"  placeholder="new subject Code eg:IT001" ng-model="subjectCode" required="true" pattern="^ *[A-Za-z]+[A-Za-z0-9]{5}$" title="please insert valid format for subject code eg:- IT13148">
                             </div>
                         </div>
                         <div class="row form-group">

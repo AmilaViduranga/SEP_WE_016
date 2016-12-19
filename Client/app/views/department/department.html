@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" name="departmentName" required="true" placeholder="new department name eg:Department of SoftwareEnginering"
-                               ng-model="departmentName" required="true">
+                               ng-model="departmentName" required="true" pattern="^ *[A-Za-z]+[A-Za-z]*$" title="please enter valid format of name eg:- computing">
                     </div>
                 </div>
                 <div class="row form-group">
@@ -34,7 +34,7 @@
                         <label class="pull-right">Faculty Name</label>
                     </div>
                     <div class="col-sm-9">
-                        <select class="form-control" ng-model="faculty">
+                        <select class="form-control" ng-model="faculty" required="true">
                             <option disabled selected value> select a faculty </option>
                             <option ng-repeat="faculty in faculties" value="{{faculty.id}}" required="true">{{faculty.facultyName}}</option>
                         </select>
